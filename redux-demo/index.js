@@ -19,3 +19,24 @@ function buy_cake() {
 
 // action is an object with type property
 // and action creater is an function that returns an action
+
+// this is an reducer
+
+// (previousState, action) => newState
+
+
+const initialState = {
+    numberOfCakes : 10
+}
+
+const reducer = (state = initialState, action) => {
+    switch(action.type) {
+
+        case BUY_CAKE: return {
+            ...state,
+            numberOfCakes : state.numberOfCakes - 1
+        }
+
+        default : return state 
+    }
+}
