@@ -1,5 +1,5 @@
 {
-  "name": "firebase-react",
+  "name": "my-react-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "firebase": "^12.2.1",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^7.3.2",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
