@@ -48,6 +48,7 @@ export default [
      'Nellore',
      'Visakhapatnam',
      'Vizianagaram',
+     
      'Warangal',
      'Eluru',
      'Kadapa',
