@@ -1,5 +1,6 @@
 import './App.css'
-import PhoneOTPform from './components/PhoneComponent'
+import PhoneOTPform from './OTPcomponents/PhoneComponent'
+
 
 function App() {
   return (
