@@ -1,4 +1,7 @@
-.App {
+
+/* otp css */
+
+/* .App {
   font-family: sans-serif;
   text-align: center;
 }
@@ -9,4 +12,9 @@
   margin: 5px;
   text-align: center;
   font-size: 1.2em;
-}
+} */
+
+
+/* tailwind css */
+
+@import "tailwindcss";

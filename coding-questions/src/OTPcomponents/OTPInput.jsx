@@ -33,12 +33,12 @@ const OTPInput = ({ length = 4, onOtpSubmit = () => {} }) => {
   };
 
   const handleClick = (index, e) => {
-    inputRefs.current[index].setSelectionRange(1, 1);
+    // inputRefs.current[index].setSelectionRange(1, 1);
 
     // optional validation
-    if(index > 0 && !otp[index-1] ) { 
-        inputRefs.current[otp.indexOf("")].focus()
-    }
+    // if(index > 0 && !otp[index-1] ) { 
+    //     inputRefs.current[otp.indexOf("")].focus()
+    // }
   };
 
   const handleKeyDown = (index, e) => {
