@@ -4,28 +4,30 @@ import DragAndDrop from './DragandDrop/DragAndDrop'
 import MemoryGame from './MemoryGameComponents/MemoryGame'
 import Model from './ModelComponents/Model'
 import PhoneOTPform from './OTPcomponents/PhoneComponent'
+// import TabsComponent from './TabsComponent/TabsComponent'
+import TabForm from './TabsComponent/TabForm'
 
 
 function App() {
 
   // this object for drag and drop 
 
-  const initialData = {
-    Todo: [
-      "Design UI mockups",
-      "Set up project repository",
-      "Write unit tests",
-      "Integrate payment gateway"
-    ],
-    "In progress": ["develop authentic flow", "Implement react app"],
-    Completed: [
-      "Set up ci/cd pipeline",
-      "Conduct code reviews",
-      "Develop initial version to staging"
-    ]
-  }
+  // const initialData = {
+  //   Todo: [
+  //     "Design UI mockups",
+  //     "Set up project repository",
+  //     "Write unit tests",
+  //     "Integrate payment gateway"
+  //   ],
+  //   "In progress": ["develop authentic flow", "Implement react app"],
+  //   Completed: [
+  //     "Set up ci/cd pipeline",
+  //     "Conduct code reviews",
+  //     "Develop initial version to staging"
+  //   ]
+  // }
 
-  const [showModel, setShoeModel] = useState(false)
+  // const [showModel, setShoeModel] = useState(false)
 
 
   return (
@@ -45,9 +47,18 @@ function App() {
    {/* <DragAndDrop initialState={initialData} /> */}
 
    {/* Model component */}
-   <Model isOpen={showModel}  closeModel={() => {
+
+   {/* <Model isOpen={showModel}  closeModel={() => {
     setShoeModel(false)
-   }}/>
+   }}/> */}
+
+
+   {/* tabs question */}
+
+   {/*  show tab list and component based on selected tab  */}
+   {/* check edge cases of optimisation - open ended */}
+
+   <TabForm />
 
 
    </>

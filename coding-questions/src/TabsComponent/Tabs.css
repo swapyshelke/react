@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main__container{
+ display: flex;
+ flex-direction: column;
+ padding: 0.5rem;
+  /* border: 1px solid rgb(0, 0, 0); */
+}
+
+.container {
+display: flex;
+/* flex-direction: column; */
+ /* border: 1px solid red; */
+
+}
+
+.heading{
+    padding: 4px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-weight: 900;
+    margin: 4px;
+    cursor: pointer;
+    /* display: flex; */
+    /* flex-direction: column; */
+}
+
+.tab__body{
+    border: 2px solid rgb(0, 0, 0);
+    padding: 1rem;
+    height: 200px;
+    width: 40%;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+
+/* profile */
+
+.profile{
+    /* border: 1px solid; */
+    display: flex;
+    flex-direction: column;
+}
+
+.profile input {
+    border: 1px solid;
+
+}
