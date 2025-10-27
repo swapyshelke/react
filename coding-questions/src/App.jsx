@@ -1,10 +1,14 @@
+import { useState } from 'react'
 import './App.css'
 import DragAndDrop from './DragandDrop/DragAndDrop'
 import MemoryGame from './MemoryGameComponents/MemoryGame'
+import Model from './ModelComponents/Model'
 import PhoneOTPform from './OTPcomponents/PhoneComponent'
 
 
 function App() {
+
+  // this object for drag and drop 
 
   const initialData = {
     Todo: [
@@ -20,6 +24,10 @@ function App() {
       "Develop initial version to staging"
     ]
   }
+
+  const [showModel, setShoeModel] = useState(false)
+
+
   return (
    <>
 
@@ -34,7 +42,12 @@ function App() {
    {/* <MemoryGame /> */}
 
    {/* drag and drop functionality */}
-   <DragAndDrop initialState={initialData} />
+   {/* <DragAndDrop initialState={initialData} /> */}
+
+   {/* Model component */}
+   <Model isOpen={showModel}  closeModel={() => {
+    setShoeModel(false)
+   }}/>
 
 
    </>
@@ -42,3 +55,5 @@ function App() {
 }
 
 export default App
+
+// 5:00 - model 
