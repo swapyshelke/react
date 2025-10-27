@@ -18,3 +18,26 @@
 /* tailwind css */
 
 @import "tailwindcss";
+
+
+/* body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.model-container {
+  position: fixed;
+  border: 2px solid ;
+  padding: 5px;
+  /* margin: 2rem; */
+  /* text-align: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+}
+
+.btn {
+  border: 1px solid;
+} */ 
