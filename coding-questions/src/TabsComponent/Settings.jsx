@@ -16,7 +16,7 @@ const Settings = ({ data, setData }) => {
       <div>
         <label>
           <input
-            type="checkbox"
+            type="radio"
             name="dark"
             checked={theme === "dark"}
             onChange={handleDataChange}
@@ -27,7 +27,7 @@ const Settings = ({ data, setData }) => {
       <div>
         <label>
           <input
-            type="checkbox"
+            type="radio"
             name="light"
             checked={theme === "light"}
             onChange={handleDataChange}
