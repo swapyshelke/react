@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import DragAndDrop from './DragandDrop/DragAndDrop'
 import MemoryGame from './MemoryGameComponents/MemoryGame'
@@ -6,6 +6,16 @@ import Model from './ModelComponents/Model'
 import PhoneOTPform from './OTPcomponents/PhoneComponent'
 // import TabsComponent from './TabsComponent/TabsComponent'
 import TabForm from './TabsComponent/TabForm'
+
+
+
+// product cart - pagination
+const ProductCart = ({image, title}) => {
+  return <div className='product-card'>
+    <img src={image} alt={title} className='product-img' />
+    <span>{title}</span>
+  </div>
+}
 
 
 function App() {
@@ -31,17 +41,24 @@ function App() {
 
 
   // pagination - code
+
+  const [products, setProducts] = useState([]);
+
   const fetchData = async () => {
     const data = await fetch("https://dummyjson.com/products?limit=10")
     const json = await data.json();
-    console.log(json.products);
-    
+    setProducts(json.products);            
   }
 
-  fetchData();
+  useEffect(() => {
+    fetchData();
+  }, [])
+
+  // console.log(products);
+  
 
 
-  return (
+  return  !products.length ? (<h1>No products found </h1>) : (
    <>
 
    {/* otp component data */}
@@ -74,8 +91,15 @@ function App() {
 
    {/* Pagination */}
 
-<h1>Pagination</h1>
+{/* <h1>Pagination</h1> */}
 
+{
+  products.map((product, index) => (
+    // return <div key={index}>{product.title}</div>
+    <ProductCart key={product.index} title={product.title} image={product.thumbnail} />
+
+  ))
+}
 
    </>
   )
