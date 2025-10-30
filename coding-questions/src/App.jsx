@@ -30,6 +30,17 @@ function App() {
   // const [showModel, setShoeModel] = useState(false)
 
 
+  // pagination - code
+  const fetchData = async () => {
+    const data = await fetch("https://dummyjson.com/products?limit=10")
+    const json = await data.json();
+    console.log(json.products);
+    
+  }
+
+  fetchData();
+
+
   return (
    <>
 
@@ -58,7 +69,12 @@ function App() {
    {/*  show tab list and component based on selected tab  */}
    {/* check edge cases of optimisation - open ended */}
 
-   <TabForm />
+   {/* <TabForm /> */}
+
+
+   {/* Pagination */}
+
+<h1>Pagination</h1>
 
 
    </>
