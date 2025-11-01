@@ -45,7 +45,7 @@ function App() {
   const [products, setProducts] = useState([]);
 
   const fetchData = async () => {
-    const data = await fetch("https://dummyjson.com/products?limit=10")
+    const data = await fetch("https://dummyjson.com/products?limit=30")
     const json = await data.json();
     setProducts(json.products);            
   }
@@ -93,13 +93,15 @@ function App() {
 
 {/* <h1>Pagination</h1> */}
 
-{
+<div className='product-container'>
+  {
   products.map((product, index) => (
     // return <div key={index}>{product.title}</div>
     <ProductCart key={product.index} title={product.title} image={product.thumbnail} />
 
   ))
 }
+</div>
 
    </>
   )
