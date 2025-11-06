@@ -42,10 +42,12 @@ function App() {
 
   // pagination - code
 
+  const PAGE_SIZE = 10;
+
   const [products, setProducts] = useState([]);
 
   const fetchData = async () => {
-    const data = await fetch("https://dummyjson.com/products?limit=30")
+    const data = await fetch("https://dummyjson.com/products?limit=500")
     const json = await data.json();
     setProducts(json.products);            
   }
@@ -55,6 +57,9 @@ function App() {
   }, [])
 
   // console.log(products);
+
+  const totalProducts = products.length;
+  const noOfPages = Math.ceil(totalProducts / PAGE_SIZE);
   
 
 
@@ -91,7 +96,13 @@ function App() {
 
    {/* Pagination */}
 
-{/* <h1>Pagination</h1> */}
+<h2>Pagination</h2>
+
+<div>
+  {
+  [...Array(10).keys()].map(n => <span className='page_no'>{n}</span>)
+}
+</div>
 
 <div className='product-container'>
   {

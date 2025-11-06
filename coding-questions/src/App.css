@@ -64,3 +64,9 @@
   /* height: 100px; */
   width: 200px;
 }
+
+.page_no{
+  padding: 8px;
+  margin: 2px;  
+  border: 1px solid black;
+}
