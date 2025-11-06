@@ -41,6 +41,21 @@ const TabForm = () => {
   // ActiveTabComponent - this variable will have index of an active tab
   // is this variable or a function (component)
 
+  const handleNextClick = () => {
+    setActiveTab(prev => prev + 1);
+  }
+
+  const handlePrevClick = () => {
+          setActiveTab(prev => prev - 1);
+
+  }
+
+
+  const handleSubmitClick = () => {
+      // ask interviewer what to do on submit
+      // make api call
+      
+  }
   return (
     <div className="main__container">
       <div className="container">
@@ -58,6 +73,10 @@ const TabForm = () => {
       </div>
 
       <div className="tab__body">{<ActiveTabComponent data={data} setData={setData} />}</div>
+
+      {activeTab > tabs.length - 1 && <button onClick={handlePrevClick}>Prev</button>}
+      {activeTab < tabs.length - 1 && <button onClick={handleNextClick}>Next</button>}
+      {activeTab === tabs.length - 1 && <button onClick={handleSubmitClick}>Submit</button>}
     </div>
   );
 };
